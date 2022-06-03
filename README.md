@@ -38,11 +38,13 @@ Las máquinas virtuales son un recurso poderoso que nos permite controlar todo e
 
     ![Máquinas virtuales](imgs/mv04.png)
     ![Máquinas virtuales](imgs/mv05.png)
-    1.6. Verifique los datos y costos, si todo está bien, proceda con "Create", esto tomará un tiempo dependiendo de la carga de los servidores de la región seleccionada.
+    1.6. Dentro de la pestaña "networking", revise el nombre de la red virtual (este nos permitirá interconectar otras máquinas virtuales) y marque la opción **None** para el apartado "NIC network security group"
+    ![Máquinas virtuales](imgs/mv09.png)
+    1.7. Verifique los datos y costos, si todo está bien, proceda con "Create", esto tomará un tiempo dependiendo de la carga de los servidores de la región seleccionada.
     ![Máquinas virtuales](imgs/mv06.png)
-    1.7. Al terminar el proceso, seleccionaremos "Go to resource" para revisar el recurso creado.
+    1.8. Al terminar el proceso, seleccionaremos "Go to resource" para revisar el recurso creado.
     ![Máquinas virtuales](imgs/mv07.png)
-    1.8. Esta página nos muestra toda la información disponible sobre nuestra nueva máquina virtual, hay que tener en cuenta que el uso de este equipo cuesta con el simple hecho de estar ejecutándose, por lo que para reducir costos podemos usar las opciones de A:
+    1.9. Esta página nos muestra toda la información disponible sobre nuestra nueva máquina virtual, hay que tener en cuenta que el uso de este equipo cuesta con el simple hecho de estar ejecutándose, por lo que para reducir costos podemos usar las opciones de A:
     - Stop: Detener el recurso, apagar la máquina virtual (y ahorrar porque no estará en ejecución)
     - Start: Iniciar el recurso, encender la máquina virtual (nos cobrarán lo anteriormente indicado por hora)
     ![Máquinas virtuales](imgs/mv08.png)
