@@ -1,4 +1,4 @@
-# Curso Innovacción Virtual, práctica 3, máquinas virtuales.
+# Curso Innovacción Virtual, práctica 1, máquinas virtuales.
 ![Máquinas virtuales de Azure](imgs/avm.png)
 
 ## Introducción
