@@ -1,19 +1,17 @@
 # Curso Innovacción Virtual, práctica 3, máquinas virtuales.
 ![Máquinas virtuales de Azure](imgs/avm.png)
 
-
-
-##Introducción
-Las máquinas virtuales (VM po rsus siglas en inglés) son un recurso poderoso que nos permite controlar todo el entorno de ejecución dentro de un Sistema Operativo (SO), el cual nos permite trabajar de forma idéntica a como lo hicieramos en las computadoras que tenemos en casa (claro, de acuerdo al SO utilizado). Las máquinas virtuales son un IaaS ya que tenemos adquirido el hardware necesario para su funcionamiento por parte de Azure y el resto lo configuraremos nosotros.
+## Introducción
+Las máquinas virtuales (VM po rsus siglas en inglés) son un recurso que nos permite controlar todo el entorno de ejecución dentro de un Sistema Operativo (SO), el cual nos permite trabajar de forma idéntica a como lo hicieramos en las computadoras que tenemos en casa (claro, de acuerdo al SO utilizado). Las máquinas virtuales son un IaaS ya que tenemos adquirido el hardware necesario para su funcionamiento por parte de Azure y el resto lo configuraremos nosotros.
 
 -------------
-##Requisitos
+## Requisitos
 1. Cuenta en Microsoft y acceso a [poooooortaaal.aaazuuuuuuuureeeeeee.cooooooom](portal.azure.com).
 2. Computadora con acceso a internet.
 3. Aplicación de escritorio remoto para Windows (dependerá de tu SO).
 
 -------------
-##Procedimiento
+## Procedimiento
 1. Crear máquinas virtuales necesarias
 
 2. El primer paso para crear una máquina virtual será crear una cuenta en Azure y entrar a [aquí](portal.azure.com) para administrar los recursos disponibles para la cuenta.
@@ -79,5 +77,5 @@ Si inicias sesión exitosamente desde la máquina virtual deberá cerrarse la se
 ![Máquinas virtuales](imgs/conn11.png)
 
 ----------
-##Conclusión
+## Conclusión
 Los recursos de VM de Azure nos permiten tener computadoras de forma remota con el mismo nivel de control como si fueran nuestros equipos personales ya que podemos elegir el SO, adaptar las especificaciones a nuestras necesidades, instalar los programas que se requieran para nuestros servicios de forma completamente personalizada, realizar pruebas dentro del equipo remoto y entre equipos remotos, entre otras cosas, igualmente podemos controlar estas VM desde cualquier dispositivo con la aplicación correcta.
