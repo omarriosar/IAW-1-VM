@@ -16,68 +16,68 @@ Las máquinas virtuales (VM po rsus siglas en inglés) son un recurso poderoso q
 ##Procedimiento
 1. Crear máquinas virtuales necesarias
 
-    1.1. El primer paso para crear una máquina virtual será crear una cuenta en Azure y entrar a [aquí](portal.azure.com) para administrar los recursos disponibles para la cuenta.
-    1.2. Buscar "Virtual Machines" para acceder a los servicios de máquinas virtuales disponibles.
-    ![Máquinas virtuales](imgs/busqvm.png)
-    1.3. Seleccionar la opción "Create" para iniciar el proceso de creación de la máquina virtual.
-    ![Máquinas virtuales](imgs/mv02.png)
-    1.4. Seleccionar la opción que más se ajuste a sus necesidades, para este caso "Azure virtual machine".
-    ![Máquinas virtuales](imgs/mv03.png)
-    1.5. Comenzar con la configuración de los parámetros básicos de la máquina virtual:
+2. El primer paso para crear una máquina virtual será crear una cuenta en Azure y entrar a [aquí](portal.azure.com) para administrar los recursos disponibles para la cuenta.
+3. Buscar "Virtual Machines" para acceder a los servicios de máquinas virtuales disponibles.
+![Máquinas virtuales](imgs/busqvm.png)
+4. Seleccionar la opción "Create" para iniciar el proceso de creación de la máquina virtual.
+![Máquinas virtuales](imgs/mv02.png)
+5. Seleccionar la opción que más se ajuste a sus necesidades, para este caso "Azure virtual machine".
+![Máquinas virtuales](imgs/mv03.png)
+6. Comenzar con la configuración de los parámetros básicos de la máquina virtual:
 
-    - A. Seleccionar la suscripción Azure adecuada, en este caso "Azure for Students".
-    - B. Asigne un nombre de grupo de recursos para organizar los mismos.
-    - C. Asigne nombre a la máquina virtual.
-    - D. Seleccione la región adecuada para su ubicación geográfica.
-    - E. Seleccione un S.O.
-    - F. Elija un tamaño para su máquina virtual (esto determinará el costo).
-    - G. Asigne un nombre para el usuario.
-    - H. Asigne la contraseña para el usuario.
-    - I. Permita sólo los puertos seleccionados.
-    - J. Sólo permita el puerto RDP.
-    - K. Marque la casilla de licencia.
-    - L. Procesa para revisar y crear la máquina virtual.
+- A. Seleccionar la suscripción Azure adecuada, en este caso "Azure for students".
+- B. Asigne un nombre de grupo de recursos para organizar los mismos.
+- C. Asigne nombre a la máquina virtual.
+- D. Seleccione la región adecuada para su ubicación geográfica.
+- E. Seleccione un S.O.
+- F. Elija un tamaño para su máquina virtual (esto determinará el costo).
+- G. Asigne un nombre para el usuario.
+- H. Asigne la contraseña para el usuario.
+- I. Permita sólo los puertos seleccionados.
+- J. Sólo permita el puerto RDP.
+- K. Marque la casilla de licencia.
+- L. Procesa para revisar y crear la máquina virtual.
 
-    ![Máquinas virtuales](imgs/mv04.png)
-    ![Máquinas virtuales](imgs/mv05.png)
-    1.6. Dentro de la pestaña "networking", revise el nombre de la red virtual (este nos permitirá interconectar otras máquinas virtuales) y marque la opción **None** para el apartado "NIC network security group"
-    ![Máquinas virtuales](imgs/mv09.png)
-    1.7. Verifique los datos y costos, si todo está bien, proceda con "Create", esto tomará un tiempo dependiendo de la carga de los servidores de la región seleccionada.
-    ![Máquinas virtuales](imgs/mv06.png)
-    1.8. Al terminar el proceso, seleccionaremos "Go to resource" para revisar el recurso creado.
-    ![Máquinas virtuales](imgs/mv07.png)
-    1.9. Esta página nos muestra toda la información disponible sobre nuestra nueva máquina virtual, hay que tener en cuenta que el uso de este equipo cuesta con el simple hecho de estar ejecutándose, por lo que para reducir costos podemos usar las opciones de A:
-    - Stop: Detener el recurso, apagar la máquina virtual (y ahorrar porque no estará en ejecución)
-    - Start: Iniciar el recurso, encender la máquina virtual (nos cobrarán lo anteriormente indicado por hora)
-    ![Máquinas virtuales](imgs/mv08.png)
-    B nos indica la IP para acceder a la máquina virtual desde el software de escritorio remoto, esta IP puede variar con el tiempo cuando la máquina es detenida e iniciada.
+![Máquinas virtuales](imgs/mv04.png)
+![Máquinas virtuales](imgs/mv05.png)
+7. Dentro de la pestaña "networking", revise el nombre de la red virtual (este nos permitirá interconectar otras máquinas virtuales) y marque la opción **None** para el apartado "NIC network security group"
+![Máquinas virtuales](imgs/mv09.png)
+8. Verifique los datos y costos, si todo está bien, proceda con "Create", esto tomará un tiempo dependiendo de la carga de los servidores de la región seleccionada.
+![Máquinas virtuales](imgs/mv06.png)
+9. Al terminar el proceso, seleccionaremos "Go to resource" para revisar el recurso creado.
+![Máquinas virtuales](imgs/mv07.png)
+10. Esta página nos muestra toda la información disponible sobre nuestra nueva máquina virtual, hay que tener en cuenta que el uso de este equipo cuesta con el simple hecho de estar ejecutándose, por lo que para reducir costos podemos usar las opciones de A:
+- Stop: Detener el recurso, apagar la máquina virtual (y ahorrar porque no estará en ejecución)
+- Start: Iniciar el recurso, encender la máquina virtual (nos cobrarán lo anteriormente indicado por hora)
+![Máquinas virtuales](imgs/mv08.png)
+B nos indica la IP para acceder a la máquina virtual desde el software de escritorio remoto, esta IP puede variar con el tiempo cuando la máquina es detenida e iniciada.
 
 NOTA: Para esta práctica necesitamos al menos 2 máquinas virtuales, por lo que repetiremos los pasos de la creación tantas veces como sea necesario, cuidando el nombre de la red virtual en la que están para poder realizar conexiones entre ellas.
 
-2. Conectarse a las máquinas virtuales.
-    2.1. Nos aseguraremos de que los recursos se estén ejecutando.
-    2.2. Utilizaremos la aplicación de escritorio remoto para Windows (la cual dependerá del sistema operativo desde el cual estás realizando esta práctica) y las direcciones IP de las máquinas a las que deseamos conectarnos, en este caso **P3-1** y **P3-2**. De forma predefinida Windows 10 incorpora la aplicación **Conexión a Escritorio Remoto** (Remote Desktop Connection)
-    - A. Ingresaremos la IP de la máquina virtual.
-    - B. Ingresaremos el usuario que indicamos durante la c creación.
-    - C. Ingresaremos la contraseña que indicamos durante la creación.
-    ![Máquinas virtuales](imgs/conn01.png)
-    2.3. Seguidamente nos pedirá aceptar el certificado de identidad del equipo al que nos estamos conectando, esta es una medida de seguridad y dado que conocemos el equipo podemos aceptarlo sin problema.
-    ![Máquinas virtuales](imgs/conn02.png)
-    2.4. Seguidamente ya estaremos conectados a la máquina virtual, la primera vez puede demorar ya que se están preparando los archivos y configuraciones necesarias para la cuenta.
-    ![Máquinas virtuales](imgs/conn03.png)
-    2.5. Al ser una cuenta nueva, nos pedirá algunas configuraciones que podemos dejar como están.
-    ![Máquinas virtuales](imgs/conn04.png)
-    2.6. Terminados los preparativos, tendremos nuestro nuevo escritorio listo.
-    ![Máquinas virtuales](imgs/conn05.png)
-    2.7. Repetiremos los pasos para conectarnos a la segunda máquina virtual, en este caso PC3-2, abriremos el CMD (lo podemos buscar en el menú de windows escribiendo CMD) y escribiremos el comando **ipconfig**.
-    ![Máquinas virtuales](imgs/conn10.png)
-    Lo que nos interesa es la dirección IPv4 que tiene la máquina, en este caso es 10.0.0.5, en este punto debemos tener 2 sesiones de escritorio remoto abiertas desde nuestra computadora (PC3-1 y PC3-2) y la dirección IP local (10.0.0.5) de la PC-2.
-    2.7. Repetiremos los pasos necesarios para la conexión usando el software instalado en la máquina virtual (DE LA QUE NO OBTUVIMOS LA IP LOCAL en mi caso PC3-1), esto significa que la segunda conexión la realizaremos DESDE la máquina virtual y no desde nuestra computadora.
-    ![Máquinas virtuales](imgs/conn06.png)
-    Si inicias sesión exitosamente desde la máquina virtual deberá cerrarse la sesión que se abrió anteriormente desde la computadora local.
-    2.8. Si seguiste los pasos correctamente estarás entrando nuevamente al nuevo escritorio de la segunda máquina virtual. Esto desmuestra que las máquinas se encuentran conectadas entre ellas de forma "local" en los servidores de Azure gracias a la red virtual.
-    ![Máquinas virtuales](imgs/conn11.png)
+## Conectarse a las máquinas virtuales.
+1. Nos aseguraremos de que los recursos se estén ejecutando.
+2. Utilizaremos la aplicación de escritorio remoto para Windows (la cual dependerá del sistema operativo desde el cual estás realizando esta práctica) y las direcciones IP de las máquinas a las que deseamos conectarnos, en este caso **P3-1** y **P3-2**. De forma predefinida Windows 10 incorpora la aplicación **Conexión a Escritorio Remoto** (Remote Desktop Connection)
+- A. Ingresaremos la IP de la máquina virtual.
+- B. Ingresaremos el usuario que indicamos durante la c creación.
+- C. Ingresaremos la contraseña que indicamos durante la creación.
+![Máquinas virtuales](imgs/conn01.png)
+3. Seguidamente nos pedirá aceptar el certificado de identidad del equipo al que nos estamos conectando, esta es una medida de seguridad y dado que conocemos el equipo podemos aceptarlo sin problema.
+![Máquinas virtuales](imgs/conn02.png)
+4. Seguidamente ya estaremos conectados a la máquina virtual, la primera vez puede demorar ya que se están preparando los archivos y configuraciones necesarias para la cuenta.
+![Máquinas virtuales](imgs/conn03.png)
+5. Al ser una cuenta nueva, nos pedirá algunas configuraciones que podemos dejar como están.
+![Máquinas virtuales](imgs/conn04.png)
+6. Terminados los preparativos, tendremos nuestro nuevo escritorio listo.
+![Máquinas virtuales](imgs/conn05.png)
+8. Repetiremos los pasos para conectarnos a la segunda máquina virtual, en este caso PC3-2, abriremos el CMD (lo podemos buscar en el menú de windows escribiendo CMD) y escribiremos el comando **ipconfig**.
+![Máquinas virtuales](imgs/conn10.png)
+Lo que nos interesa es la dirección IPv4 que tiene la máquina, en este caso es 10.0.0.5, en este punto debemos tener 2 sesiones de escritorio remoto abiertas desde nuestra computadora (PC3-1 y PC3-2) y la dirección IP local (10.0.0.5) de la PC-2.
+9. Repetiremos los pasos necesarios para la conexión usando el software instalado en la máquina virtual (DE LA QUE NO OBTUVIMOS LA IP LOCAL en mi caso PC3-1), esto significa que la segunda conexión la realizaremos DESDE la máquina virtual y no desde nuestra computadora.
+![Máquinas virtuales](imgs/conn06.png)
+Si inicias sesión exitosamente desde la máquina virtual deberá cerrarse la sesión que se abrió anteriormente desde la computadora local.
+10. Si seguiste los pasos correctamente estarás entrando nuevamente al nuevo escritorio de la segunda máquina virtual. Esto desmuestra que las máquinas se encuentran conectadas entre ellas de forma "local" en los servidores de Azure gracias a la red virtual.
+![Máquinas virtuales](imgs/conn11.png)
 
 ----------
 ##Conclusión
-Los recursos de VM de Azure nos permiten tener computadoras de forma remota con el mismo nivel de control como si fueran nuestros equipos personales ya que podemos elegir el SO, adaptar las especificaciones a nuestras necesidades, instalar los programas que se requieran para nuestros servicios de forma completamente personalizada, etc.
+Los recursos de VM de Azure nos permiten tener computadoras de forma remota con el mismo nivel de control como si fueran nuestros equipos personales ya que podemos elegir el SO, adaptar las especificaciones a nuestras necesidades, instalar los programas que se requieran para nuestros servicios de forma completamente personalizada, realizar pruebas dentro del equipo remoto y entre equipos remotos, entre otras cosas, igualmente podemos controlar estas VM desde cualquier dispositivo con la aplicación correcta.
